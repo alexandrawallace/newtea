@@ -27,7 +27,11 @@
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/wpcom-cn/assets/fonts/icons-2.6.4.js?ver=6.1.2' id='wpcom-icons-js'></script>
 		<link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.3.2/styles/tomorrow-night-bright.min.css">
 		<script src='https://cdn.staticfile.org/highlight.js/10.3.2/highlight.min.js'></script>
-		{{ &OPT.codeBeforHead }}
+		<style>
+			#waline-recent img {max-width: 100%;}
+			#waline-recent li {border: thick double #32a1ce;}
+		</style>
+		<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 		<style>
 			body {
 				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
@@ -138,7 +142,7 @@
 								</div>
 							</div>
 							<div id="comments" class="entry-comments">
-								{{ &OPT.commentCode }}
+								<div id="waline"  name="waline" class="comments-area"></div>
 							</div>
 						</div>
 					</article>
@@ -172,7 +176,11 @@
 							{{ /widgetTagsList }}
 						</div>
 					</div>
-					{{ &OPT.widgetOther }}
+					<div id="linkcat-0" class="widget widget_links">
+						<h3 class="widget-title">
+							<span>最新评论</span></h3>
+						<div id="waline-recent"></div>
+					</div>
 				</aside>
 			</div>
 		</div>
@@ -246,7 +254,31 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 			</script>
 <script>hljs.initHighlightingOnLoad(); //代码高亮
 					</script>
-		{{ &OPT.codeBeforBody }}
+		<script>
+			//这一段是初始化Waline的,visitor: true记得开启
+			new Waline({
+				el:'#waline',
+				serverURL: 'https://www.newtea.ga',
+				appId: 'DSluAu7SicEtx6G2i1WMRrkF-MdYXbMMI',
+				appKey: 'BhYNGsPRy5mmyjNxYmYA1amp',
+				avatar:'monsterid',
+				recordIP:false,
+				requiredFields:['nick'],
+				visitor: true,
+				uploadImage:false,
+				copyright:false,
+				//path:"/",
+				placeholder:"说出你的想法..."
+			})
+			//这一段是加载最近评论的
+			window.addEventListener('load', function() {
+				Waline.Widget.RecentComments({
+					el: '#waline-recent',
+					serverURL: 'https://www.newtea.ga',
+					count: 5
+				});
+			});
+		</script>
 	</body>
 
 </html>
