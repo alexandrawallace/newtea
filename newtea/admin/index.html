@@ -33,10 +33,10 @@
 				<a href="/" >皮革新茶馆</a>
 			</li>
 			<li>
-				<a href="#list" data-toggle="tab">已发布文章</a>
+				<a href="#list" data-toggle="tab">已发表文章</a>
 			</li>
 			<li  class="active">
-				<a href="#new" data-toggle="tab">创建新文章</a>
+				<a href="#new" data-toggle="tab">编写新文章</a>
 			</li>
 			<li>
 				<a href="#config" data-toggle="tab">设置</a>
@@ -115,10 +115,22 @@
 		<div class="container" >
 			<form id="configForm" role="form" >
 				<div class="form-group">
-				    <label for="name">菜单, 例:<code>[{"title":"文学","url":"/category/文学"}]</code></label>
+				    <label for="name">分类, 例:<code>["类别A","类别B","类别C","类别D"]</code></label>
+					<textarea class="form-control" id="WidgetCategory" name="WidgetCategory" rows="3" placeholder='["分类A","分类B"]'></textarea>
+				</div>
+
+				<div class="form-group">
+				    <label for="name">菜单, 例:<code>[{"title":"技术","url":"/category/技术"},{"title":"文学","url":"/category/文学"}]</code></label>
 					<textarea class="form-control" id="WidgetMenu" name="WidgetMenu" rows="5"  placeholder='[
 	{"title":"菜单A"	,"url":"/category/菜单A"},
 	{"title":"菜单B"	,"url":"/category/菜单B"}
+]'></textarea>
+				</div>
+				<div class="form-group">
+				    <label for="name">其他链接, 例:<code>[{"title":"Google","url":"https://www.google.com/"},{"title":"Youtube","url":"https://www.youtube.com/"}]</code></label>
+					<textarea class="form-control" id="WidgetLink" name="WidgetLink" rows="5"  placeholder='[
+	{"title":"好友"	,"url":"https://blog.gezhong.vip/"},
+	{"title":"谷歌"	,"url":"https://www.google.com/"}
 ]'></textarea>
 				</div>
 				<a  tabindex="0"  role="button"  type="submit" id="btn_saveConfig" class="btn btn-default" onclick="saveConfig()">保存</a>
@@ -157,8 +169,11 @@
 <script type="text/javascript">
 	$(function() {
 		$('#myTab li:eq(0) 1').tab('show');
+		//获取分类
+		var categoryJson = <!--{categoryJson}-->;
 		//获取菜单
 		var menuJson = <!--{menuJson}-->;
+		var linkJson = <!--{linkJson}-->;
 		var mdEditor = editormd("content", {
 				// width  : "90%",
 				 height : 640,
@@ -172,7 +187,17 @@
 			});
 		//表单赋值
 		$('#createDate').val(new Date());
+
+		$('#WidgetCategory').val(JSON.stringify(categoryJson));
 		$('#WidgetMenu').val(JSON.stringify(menuJson));
+		$('#WidgetLink').val(JSON.stringify(linkJson));
+		var category = $('#category');
+		category.empty();
+		for (var i = 0; i < categoryJson.length; i++) {
+			category.append('<option id=' + categoryJson[i] + ' value=' + categoryJson[i] + '>' + categoryJson[i] + '</option>');
+		}
+		$("#loadmore").click();//初始加载一页
+	});
     //加载文章列表	
     $("#loadmore").click(function(){
         var page=$("#page").val();
@@ -232,6 +257,11 @@
     }
     //保存设置
     function saveConfig(){
+        if(!isJSON($('#WidgetCategory').val()))
+        {
+            alert("分类格式错误");
+            return false;
+        }
         if(!isJSON($('#WidgetMenu').val()))
         {
             alert("菜单格式错误"); 
