@@ -25,75 +25,19 @@
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.6/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/wpcom-cn/assets/fonts/icons-2.6.4.js?ver=6.1.2' id='wpcom-icons-js'></script>
+		<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 		<style>
-			body {
+			body ,.navbar-header ,.navbar-collapse ,.container ,.container.wrap ,.container.clearfix ,.footer ,
+			.header.header ,.sec-panel-body ,#wrap ,#wpcom-post-thumb-2 ,#tag_cloud-3 ,#linkcat-0
+			{
 				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
 				background-size:cover;  /* 让背景图基于容器大小伸缩 */
 				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
 				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
 			}
-			.navbar-header {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.navbar-collapse {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.container {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.container.wrap {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.container.clearfix{
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			
-			.footer {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.header.header {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			.sec-panel-body {
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			#wrap ,#wpcom-post-thumb-2 ,#tag_cloud-3 ,#linkcat-0{
-				background:url("https://newtea.ml/alexandrawallace/newtea/raw/master/newtea/files/newtea.png")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
-				background-size:cover;  /* 让背景图基于容器大小伸缩 */
-				background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
-				background-color:#FFFFFF;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
-			}
-			
-		</style>
-		<style>
 			#waline-recent img {max-width: 10%;}
 			#waline-recent li {border: thick double #e1e1e1;}
 		</style>
-		<script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 	</head>
 	<body class="archive paged category category-zhishi category-5 paged-2 category-paged-2 lang-cn el-boxed">
 		<header class="header">
