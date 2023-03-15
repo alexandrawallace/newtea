@@ -24,8 +24,6 @@ proxy-groups:
     type: select
     proxies:
       - ♻️ 自动选择
-      - 🔯 故障转移
-      - 🔮 负载均衡
       - 🚀 手动切换
       - DIRECT
   - name: 🚀 手动切换
@@ -47,21 +45,10 @@ proxy-groups:
       - 🇸🇬-新加坡-中速
       - 🇮🇳-孟买-高速
       - 🇺🇸-蒙克斯科纳-高速
-  - name: 🔯 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
+  - name: 🤖 ChatGPT
+    type: select
     proxies:
-      - 🇺🇸-阿什本-中高速
-      - 🇩🇪-黑森-低速
-      - 🇸🇬-新加坡-中速
-      - 🇮🇳-孟买-高速
-      - 🇺🇸-蒙克斯科纳-高速
-  - name: 🔮 负载均衡
-    type: load-balance
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
+      - 🚀 节点选择
       - 🇺🇸-阿什本-中高速
       - 🇩🇪-黑森-低速
       - 🇸🇬-新加坡-中速
@@ -84,7 +71,6 @@ proxy-groups:
   - name: 🎥 奈飞视频
     type: select
     proxies:
-      - 🎥 奈飞节点
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🚀 手动切换
@@ -114,9 +100,9 @@ proxy-groups:
   - name: 📢 谷歌FCM
     type: select
     proxies:
-      - DIRECT
       - 🚀 节点选择
       - 🚀 手动切换
+      - DIRECT
   - name: Ⓜ️ 微软云盘
     type: select
     proxies:
@@ -170,10 +156,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🚀 手动切换
-  - name: 🎥 奈飞节点
-    type: select
-    proxies:
-      - DIRECT
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -2114,6 +2096,7 @@ rules:
   - DOMAIN-SUFFIX,sony.com,🎮 游戏平台
   - DOMAIN-SUFFIX,sonyentertainmentnetwork.com,🎮 游戏平台
   - DOMAIN,steambroadcast.akamaized.net,🎮 游戏平台
+  - DOMAIN,chat.openai.com,🤖 ChatGPT
   - DOMAIN,steamcdn-a.akamaihd.net,🎮 游戏平台
   - DOMAIN,steamcommunity-a.akamaihd.net,🎮 游戏平台
   - DOMAIN,steampipe.akamaized.net,🎮 游戏平台
