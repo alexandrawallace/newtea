@@ -20,6 +20,7 @@ proxies:
   - {"type":"vmess","name":"🇮🇳-孟买-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"appforweb.GalokPeng.repl.co"}},"server":"appforweb.GalokPeng.repl.co","port":"443","uuid":"d75e037e-5799-4150-bf81-9fecf214f356","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇺🇸-谷歌云-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"mywebgame.alexandrawallac.repl.co"}},"server":"mywebgame.alexandrawallac.repl.co","port":"443","uuid":"9a3507e9-5fd9-4755-b22e-0fa43ac34037","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"name":"🇺🇸-亚马逊云-测试中","type":"ss", "server":"galok.ga", "port":443, "cipher":"chacha20-ietf-poly1305", "password":"de04add9-5c68-8bab-950c-08cd5320df18", "plugin":"v2ray-plugin", "plugin-opts":{"mode":"websocket", "host":"galok.ga", "path":"/argo-shadowsocks?ed=2048", "tls":true, "skip-cert-verify":false, "mux":false } }
+  - {name: "🇺🇸-ChatGPT专用",type: wireguard,server: 162.159.192.165,port: 4198,ip: 172.16.0.2,private-key: +IAw8TCfHQgu0oQhMXlfpI2cIiAIBwd9Ghixp84jtFA=,public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=,dns: [1.1.1.1],mtu: 1280,udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -36,6 +37,7 @@ proxy-groups:
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
+      - 🇺🇸-ChatGPT专用
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -51,10 +53,12 @@ proxy-groups:
   - name: 🤖 ChatGPT
     type: select
     proxies:
+      - 🇺🇸-ChatGPT专用
       - 🇩🇪-黑森-低速
       - 🇺🇸-亚马逊云-中高速
       - 🇸🇬-新加坡-中速
       - 🇺🇸-亚马逊云-测试中
+      - 🇺🇸-谷歌云-高速
   - name: 📲 电报消息
     type: select
     proxies:
