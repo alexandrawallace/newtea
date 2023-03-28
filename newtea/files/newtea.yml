@@ -2101,7 +2101,7 @@ rules:
   - DOMAIN-SUFFIX,sony.com,🎮 游戏平台
   - DOMAIN-SUFFIX,sonyentertainmentnetwork.com,🎮 游戏平台
   - DOMAIN,steambroadcast.akamaized.net,🎮 游戏平台
-  - DOMAIN,chat.openai.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,openai.com,🤖 ChatGPT
   - DOMAIN,steamcdn-a.akamaihd.net,🎮 游戏平台
   - DOMAIN,steamcommunity-a.akamaihd.net,🎮 游戏平台
   - DOMAIN,steampipe.akamaized.net,🎮 游戏平台
