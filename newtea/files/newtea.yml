@@ -20,6 +20,12 @@ proxies:
   - {"type":"vmess","name":"🇮🇳-孟买-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"appforweb.GalokPeng.repl.co"}},"server":"appforweb.GalokPeng.repl.co","port":"443","uuid":"d75e037e-5799-4150-bf81-9fecf214f356","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇺🇸-谷歌云-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"mywebgame.alexandrawallac.repl.co"}},"server":"mywebgame.alexandrawallac.repl.co","port":"443","uuid":"9a3507e9-5fd9-4755-b22e-0fa43ac34037","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"name":"🇺🇸-亚马逊云-测试中","type":"ss", "server":"galok.ga", "port":443, "cipher":"chacha20-ietf-poly1305", "password":"de04add9-5c68-8bab-950c-08cd5320df18", "plugin":"v2ray-plugin", "plugin-opts":{"mode":"websocket", "host":"galok.ga", "path":"/argo-shadowsocks?ed=2048", "tls":true, "skip-cert-verify":false, "mux":false } }
+  - { name: 🇸🇬-新加坡 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
+  - { name: 🇸🇬-新加坡 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
+  - { name: 🇸🇬-新加坡 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
+  - { name: 🇺🇸-美国 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 🇺🇸-美国 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 🇺🇸-美国 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 823c31da-701f-483d-b36e-896e5cf0987a, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -36,6 +42,12 @@ proxy-groups:
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
+      - 🇸🇬-新加坡 电信优化
+      - 🇸🇬-新加坡 联通优化
+      - 🇸🇬-新加坡 移动优化
+      - 🇺🇸-美国 电信优化
+      - 🇺🇸-美国 联通优化
+      - 🇺🇸-美国 移动优化
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -48,6 +60,12 @@ proxy-groups:
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
+      - 🇸🇬-新加坡 电信优化
+      - 🇸🇬-新加坡 联通优化
+      - 🇸🇬-新加坡 移动优化
+      - 🇺🇸-美国 电信优化
+      - 🇺🇸-美国 联通优化
+      - 🇺🇸-美国 移动优化
   - name: 🤖 ChatGPT
     type: select
     proxies:
@@ -56,6 +74,12 @@ proxy-groups:
       - 🇸🇬-新加坡-中速
       - 🇺🇸-亚马逊云-测试中
       - 🇺🇸-谷歌云-高速
+      - 🇸🇬-新加坡 电信优化
+      - 🇸🇬-新加坡 联通优化
+      - 🇸🇬-新加坡 移动优化
+      - 🇺🇸-美国 电信优化
+      - 🇺🇸-美国 联通优化
+      - 🇺🇸-美国 移动优化
   - name: 📲 电报消息
     type: select
     proxies:
