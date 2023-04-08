@@ -25,7 +25,6 @@ proxies:
   - { name: 🇺🇸-美国 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 🇺🇸-美国 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 🇺🇸-美国 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
-  - { name: 以下节点需要套wireguard, type: vmess, server: 127.0.0.1, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true }
   - { name: 「SCP」SG-CF1, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
   - { name: 「SCP」SG-CF1-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
   - { name: 「SCP」DE-CF-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: de1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: de1.sharecentrepro.org } }
@@ -46,13 +45,13 @@ proxies:
   - { name: 「SCP」US-DP3, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 「SCP」US-DP3-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
 proxy-groups:
-  - { name: 🚀wireguard的节点, type: select, proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] }
+  - { name: 🚀 特殊节点, type: select, proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] }
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🚀 手动切换
-      - 🚀wireguard的节点
+      - 🚀 特殊节点
       - DIRECT
   - name: 🚀 手动切换
     type: select
@@ -68,7 +67,7 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
-      - 🚀wireguard的节点
+      - 🚀 特殊节点
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -86,7 +85,7 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
-      - 🚀wireguard的节点
+      - 🚀 特殊节点
   - name: 🤖 ChatGPT
     type: select
     proxies:
@@ -100,7 +99,7 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
-      - 🚀wireguard的节点
+      - 🚀 特殊节点
   - name: 📲 电报消息
     type: select
     proxies:
