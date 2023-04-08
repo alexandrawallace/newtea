@@ -16,6 +16,7 @@ dns:
 proxies:
   - {"type":"vmess","name":"🇺🇸-亚马逊云-中高速","ws-opts":{"path":"/vmess?ed=2048","headers":{"host":"newtea.cf"}},"server":"newtea.cf","port":"443","uuid":"eaf2affa-ea56-4c8a-8207-d9f85c0225fd","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇩🇪-黑森-低速","ws-opts":{"path":"/vmess","headers":{"host":"galokpeng.cf"}},"server":"galokpeng.cf","port":"443","uuid":"de04add9-5c68-8bab-950c-08cd5320df18","alterId":"0","cipher":"chacha20-poly1305","network":"ws","tls":true}
+  - {"type":"vmess","name":"🇸🇬-新加坡-中速","ws-opts":{"path":"/vmess","headers":{"host":"pgxcg.tk"}},"server":"pgxcg.tk","port":"443","uuid":"47ce8469-614a-4b11-b050-cc4279cddf49","alterId":"0","cipher":"chacha20-poly1305","network":"ws","tls":true}
   - {"type":"vmess","name":"🇮🇳-孟买-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"appforweb.GalokPeng.repl.co"}},"server":"appforweb.GalokPeng.repl.co","port":"443","uuid":"d75e037e-5799-4150-bf81-9fecf214f356","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇺🇸-谷歌云-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"mywebgame.alexandrawallac.repl.co"}},"server":"mywebgame.alexandrawallac.repl.co","port":"443","uuid":"9a3507e9-5fd9-4755-b22e-0fa43ac34037","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"name":"🇺🇸-亚马逊云-测试中","type":"ss", "server":"galok.ga", "port":443, "cipher":"chacha20-ietf-poly1305", "password":"de04add9-5c68-8bab-950c-08cd5320df18", "plugin":"v2ray-plugin", "plugin-opts":{"mode":"websocket", "host":"galok.ga", "path":"/argo-shadowsocks?ed=2048", "tls":true, "skip-cert-verify":false, "mux":false } }
@@ -25,18 +26,41 @@ proxies:
   - { name: 🇺🇸-美国 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 🇺🇸-美国 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 🇺🇸-美国 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 以下节点需要套wireguard, type: vmess, server: 127.0.0.1, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true }
+  - { name: 「SCP」SG-CF1, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
+  - { name: 「SCP」SG-CF1-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
+  - { name: 「SCP」DE-CF-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: de1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: de1.sharecentrepro.org } }
+  - { name: 「SCP」UK-CF, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: uk1.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: uk1.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: uk1.scproxy.top } }
+  - { name: 「SCP」HK-CF, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk-hytron.ilovescp.com, network: ws, ws-opts: { path: /shirker, headers: { Host: hk-hytron.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: hk-hytron.ilovescp.com } }
+  - { name: 「SCP」HK-CF-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: hk-hytron.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: hk-hytron.ilovescp.com } }
+  - { name: 「SCP」CA-CF, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: ca.ilovescp.com, network: ws, ws-opts: { path: /shirker, headers: { Host: ca.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: ca.ilovescp.com } }
+  - { name: 「SCP」US-BuyVM1, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: ny1.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: ny1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: ny1.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM1-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: ny1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: ny1.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM2, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv1.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv1.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM2-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv1.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM3, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv2.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv2.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv2.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM3-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv2.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv2.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM4, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv3.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv3.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv3.sharecentrepro.org } }
+  - { name: 「SCP」US-BuyVM4-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv3.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv3.sharecentrepro.org } }
+  - { name: 「SCP」US-DP1, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp1.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp1.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp1.scproxy.top } }
+  - { name: 「SCP」US-DP2, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp2.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp2.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp2.scproxy.top } }
+  - { name: 「SCP」US-DP3, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 「SCP」US-DP3-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
 proxy-groups:
+  - { name: 🚀wireguard的节点, type: select, proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] }
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🚀 手动切换
+      - 🚀wireguard的节点
       - DIRECT
   - name: 🚀 手动切换
     type: select
     proxies:
       - 🇺🇸-亚马逊云-中高速
       - 🇩🇪-黑森-低速
+      - 🇸🇬-新加坡-中速
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
@@ -46,6 +70,7 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
+      - 🚀wireguard的节点
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -54,6 +79,7 @@ proxy-groups:
     proxies:
       - 🇺🇸-亚马逊云-中高速
       - 🇩🇪-黑森-低速
+      - 🇸🇬-新加坡-中速
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
@@ -63,11 +89,13 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
+      - 🚀wireguard的节点
   - name: 🤖 ChatGPT
     type: select
     proxies:
       - 🇩🇪-黑森-低速
       - 🇺🇸-亚马逊云-中高速
+      - 🇸🇬-新加坡-中速
       - 🇺🇸-亚马逊云-测试中
       - 🇺🇸-谷歌云-高速
       - 🇸🇬-新加坡 电信优化
@@ -76,6 +104,7 @@ proxy-groups:
       - 🇺🇸-美国 电信优化
       - 🇺🇸-美国 联通优化
       - 🇺🇸-美国 移动优化
+      - 🚀wireguard的节点
   - name: 📲 电报消息
     type: select
     proxies:
