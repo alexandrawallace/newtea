@@ -19,12 +19,6 @@ proxies:
   - {"type":"vmess","name":"🇮🇳-孟买-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"appforweb.GalokPeng.repl.co"}},"server":"appforweb.GalokPeng.repl.co","port":"443","uuid":"d75e037e-5799-4150-bf81-9fecf214f356","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"🇺🇸-谷歌云-高速","ws-opts":{"path":"/vm?ed=2048","headers":{"host":"mywebgame.alexandrawallac.repl.co"}},"server":"mywebgame.alexandrawallac.repl.co","port":"443","uuid":"9a3507e9-5fd9-4755-b22e-0fa43ac34037","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"name":"🇺🇸-亚马逊云-测试中","type":"ss", "server":"galok.ga", "port":443, "cipher":"chacha20-ietf-poly1305", "password":"de04add9-5c68-8bab-950c-08cd5320df18", "plugin":"v2ray-plugin", "plugin-opts":{"mode":"websocket", "host":"galok.ga", "path":"/argo-shadowsocks?ed=2048", "tls":true, "skip-cert-verify":false, "mux":false } }
-  - { name: 🇸🇬-新加坡 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
-  - { name: 🇸🇬-新加坡 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
-  - { name: 🇸🇬-新加坡 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
-  - { name: 🇺🇸-美国 电信优化, type: vmess, server: cf-dx-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
-  - { name: 🇺🇸-美国 联通优化, type: vmess, server: cf-lt-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
-  - { name: 🇺🇸-美国 移动优化, type: vmess, server: cf-yd-dns.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 「SCP」SG-CF1, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
   - { name: 「SCP」SG-CF1-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
   - { name: 「SCP」DE-CF-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: de1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: de1.sharecentrepro.org } }
@@ -44,6 +38,61 @@ proxies:
   - { name: 「SCP」US-DP2, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp2.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp2.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp2.scproxy.top } }
   - { name: 「SCP」US-DP3, type: vmess, server: cf-lt.sharecentre.online, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
   - { name: 「SCP」US-DP3-HTTP, type: vmess, server: cf-lt.sharecentre.online, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 台湾-Trojan①, type: trojan, server: tw01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw01.trojanyyds.xyz }
+  - { name: 台湾-Trojan②, type: trojan, server: tw02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw02.trojanyyds.xyz }
+  - { name: 日本1-linode, type: vmess, server: cu.awslcn.cc, port: 25267, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本2-linode, type: vmess, server: cu.awslcn.cc, port: 25272, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本3-linode, type: vmess, server: cu.awslcn.cc, port: 25276, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本4-linode, type: vmess, server: cu.awslcn.cc, port: 25277, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本5-NTT, type: vmess, server: cu.awslcn.cc, port: 25278, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本6-NTT, type: vmess, server: cu.awslcn.cc, port: 25279, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 日本-Trojan, type: trojan, server: jp01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: jp01.trojanyyds.xyz }
+  - { name: '新加坡01{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25245, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡02{优化1|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25243, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡03{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25221, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡04{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25246, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡05{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25252, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡06{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25253, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '新加坡07{优化2|V2ray}', type: vmess, server: sg1.awslcn.cc, port: 25254, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 新加坡1-linode, type: vmess, server: sg1.awslcn.cc, port: 25270, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 新加坡-Trojan①, type: trojan, server: sg02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: sg02.trojanyyds.xyz }
+  - { name: 新加坡-Trojan②, type: trojan, server: sg01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: sg01.trojanyyds.xyz }
+  - { name: '香港03{优化1|V2ray}', type: vmess, server: hk1.awslcn.cc, port: 25248, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '香港04{优化1|V2ray}', type: vmess, server: hk1.awslcn.cc, port: 25250, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '香港05{优化1|V2ray}', type: vmess, server: hk1.awslcn.cc, port: 25244, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 香港-Trojan②, type: trojan, server: hk02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: hk02.trojanyyds.xyz }
+  - { name: 香港-Trojan③, type: trojan, server: hk03.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: hk03.trojanyyds.xyz }
+  - { name: 香港-Trojan④, type: trojan, server: hk04.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: hk04.trojanyyds.xyz }
+  - { name: '美国02{优化2|V2ray}', type: vmess, server: us1.awslcn.cc, port: 25239, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '美国03{优化1|V2ray}', type: vmess, server: us1.awslcn.cc, port: 25238, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '美国04{优化1|V2ray}', type: vmess, server: us1.awslcn.cc, port: 25255, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '美国05{优化2|V2ray}', type: vmess, server: us1.awslcn.cc, port: 25256, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '美国06{优化1|V2ray}', type: vmess, server: us2.awslcn.cc, port: 25257, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 美国-Trojan, type: trojan, server: us01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: us01.trojanyyds.xyz }
+  - { name: '英国02{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25240, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '英国01{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25240, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 英国-Trojan, type: trojan, server: uk01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: uk01.trojanyyds.xyz }
+  - { name: '德国01{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25241, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '德国02{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25241, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 德国-Trojan, type: trojan, server: de01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: de01.trojanyyds.xyz }
+  - { name: '印度01{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25216, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '印度02{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25216, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 印度-Trojan, type: trojan, server: in01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: in01.trojanyyds.xyz }
+  - { name: '韩国01{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25218, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '韩国03{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25218, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 韩国-Trojan, type: trojan, server: sk01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: sk01.trojanyyds.xyz }
+  - { name: '马来01{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25228, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '马来02{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25258, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '马来03{联通|V2ray}', type: vmess, server: cu.awslcn.cc, port: 25228, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '马来04{联通|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25258, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 马来-Trojan①, type: trojan, server: my01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: my01.trojanyyds.xyz }
+  - { name: 马来-Trojan②, type: trojan, server: my02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: my02.trojanyyds.xyz }
+  - { name: '俄罗斯①{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25230, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: 俄罗斯-Trojan, type: trojan, server: ru01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: ru01.trojanyyds.xyz }
+  - { name: '台湾①{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾②{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾01{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾02{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
 proxy-groups:
   - { name: 🚀 特殊节点, type: select, proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] }
   - name: 🚀 节点选择
@@ -61,12 +110,6 @@ proxy-groups:
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
-      - 🇸🇬-新加坡 电信优化
-      - 🇸🇬-新加坡 联通优化
-      - 🇸🇬-新加坡 移动优化
-      - 🇺🇸-美国 电信优化
-      - 🇺🇸-美国 联通优化
-      - 🇺🇸-美国 移动优化
       - 🚀 特殊节点
   - name: ♻️ 自动选择
     type: url-test
@@ -79,27 +122,10 @@ proxy-groups:
       - 🇮🇳-孟买-高速
       - 🇺🇸-谷歌云-高速
       - 🇺🇸-亚马逊云-测试中
-      - 🇸🇬-新加坡 电信优化
-      - 🇸🇬-新加坡 联通优化
-      - 🇸🇬-新加坡 移动优化
-      - 🇺🇸-美国 电信优化
-      - 🇺🇸-美国 联通优化
-      - 🇺🇸-美国 移动优化
       - 🚀 特殊节点
   - name: 🤖 ChatGPT
     type: select
-    proxies:
-      - 🇩🇪-黑森-低速
-      - 🇺🇸-亚马逊云-中高速
-      - 🇺🇸-亚马逊云-测试中
-      - 🇺🇸-谷歌云-高速
-      - 🇸🇬-新加坡 电信优化
-      - 🇸🇬-新加坡 联通优化
-      - 🇸🇬-新加坡 移动优化
-      - 🇺🇸-美国 电信优化
-      - 🇺🇸-美国 联通优化
-      - 🇺🇸-美国 移动优化
-      - 🚀 特殊节点
+    proxies: [🇩🇪-黑森-低速,🇺🇸-亚马逊云-中高速,🇺🇸-亚马逊云-测试中,🚀 特殊节点,🇺🇸-谷歌云-高速,台湾-Trojan①, 台湾-Trojan②, 日本1-linode, 日本2-linode, 日本3-linode, 日本4-linode, 日本5-NTT, 日本6-NTT, 日本-Trojan, '新加坡01{优化2|V2ray}', '新加坡02{优化1|V2ray}', '新加坡03{优化2|V2ray}', '新加坡04{优化2|V2ray}', '新加坡05{优化2|V2ray}', '新加坡06{优化2|V2ray}', '新加坡07{优化2|V2ray}', 新加坡1-linode, 新加坡-Trojan①, 新加坡-Trojan②, '香港03{优化1|V2ray}', '香港04{优化1|V2ray}', '香港05{优化1|V2ray}', 香港-Trojan②, 香港-Trojan③, 香港-Trojan④, '美国02{优化2|V2ray}', '美国03{优化1|V2ray}', '美国04{优化1|V2ray}', '美国05{优化2|V2ray}', '美国06{优化1|V2ray}', 美国-Trojan, '英国02{移动|V2ray}', '英国01{移动|V2ray}', 英国-Trojan, '德国01{移动|V2ray}', '德国02{移动|V2ray}', 德国-Trojan, '印度01{移动|V2ray}', '印度02{移动|V2ray}', 印度-Trojan, '韩国01{移动|V2ray}', '韩国03{移动|V2ray}', 韩国-Trojan, '马来01{移动|V2ray}', '马来02{移动|V2ray}', '马来03{联通|V2ray}', '马来04{联通|V2ray}', 马来-Trojan①, 马来-Trojan②, '俄罗斯①{移动|V2ray}', 俄罗斯-Trojan, '台湾①{移动|V2ray}', '台湾②{移动|V2ray}', '台湾01{移动|V2ray}', '台湾02{移动|V2ray}']
   - name: 📲 电报消息
     type: select
     proxies:
