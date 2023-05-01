@@ -14,25 +14,7 @@ dns:
     - tls://1.0.0.1:853
     - tls://dns.google:853
 proxies:
-  - { name: 「SCP」SG-CF1, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg1.sharecentrepro.com, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
-  - { name: 「SCP」SG-CF1-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: sg1.sharecentrepro.com } }, ws-path: /shirker, ws-headers: { Host: sg1.sharecentrepro.com } }
-  - { name: 「SCP」DE-CF-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: de1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: de1.sharecentrepro.org } }
-  - { name: 「SCP」UK-CF, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: uk1.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: uk1.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: uk1.scproxy.top } }
-  - { name: 「SCP」HK-CF, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk-hytron.ilovescp.com, network: ws, ws-opts: { path: /shirker, headers: { Host: hk-hytron.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: hk-hytron.ilovescp.com } }
-  - { name: 「SCP」HK-CF-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: hk-hytron.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: hk-hytron.ilovescp.com } }
-  - { name: 「SCP」CA-CF, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: ca.ilovescp.com, network: ws, ws-opts: { path: /shirker, headers: { Host: ca.ilovescp.com } }, ws-path: /shirker, ws-headers: { Host: ca.ilovescp.com } }
-  - { name: 「SCP」US-BuyVM1, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: ny1.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: ny1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: ny1.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM1-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: ny1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: ny1.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM2, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv1.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv1.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM2-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv1.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv1.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM3, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv2.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv2.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv2.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM3-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv2.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv2.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM4, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: lv3.sharecentrepro.org, network: ws, ws-opts: { path: /shirker, headers: { Host: lv3.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv3.sharecentrepro.org } }
-  - { name: 「SCP」US-BuyVM4-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: lv3.sharecentrepro.org } }, ws-path: /shirker, ws-headers: { Host: lv3.sharecentrepro.org } }
-  - { name: 「SCP」US-DP1, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp1.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp1.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp1.scproxy.top } }
-  - { name: 「SCP」US-DP2, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp2.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp2.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp2.scproxy.top } }
-  - { name: 「SCP」US-DP3, type: vmess, server: 172.67.90.103, port: 443, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, tls: true, servername: dp3.scproxy.top, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
-  - { name: 「SCP」US-DP3-HTTP, type: vmess, server: 172.67.90.103, port: 80, uuid: 2e496758-950e-4549-8842-d5eec98d9fde, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /shirker, headers: { Host: dp3.scproxy.top } }, ws-path: /shirker, ws-headers: { Host: dp3.scproxy.top } }
+  - { name: 美国shodowsock, type: ss, server: ahcm.v-too.cloud, port: 10259, cipher: chacha20-ietf-poly1305, password: 42cdd4e3-c6e8-4e38-9292-b3c8af953166, udp: true }
   - { name: 台湾-Trojan①, type: trojan, server: tw01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw01.trojanyyds.xyz }
   - { name: 台湾-Trojan②, type: trojan, server: tw02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw02.trojanyyds.xyz }
   - { name: '台湾①{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
@@ -48,16 +30,16 @@ proxy-groups:
       - DIRECT
   - name: 🚀 手动切换
     type: select
-    proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] 
+    proxies: [美国shodowsock] 
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    proxies: [「SCP」SG-CF1, 「SCP」SG-CF1-HTTP, 「SCP」DE-CF-HTTP, 「SCP」UK-CF, 「SCP」HK-CF, 「SCP」HK-CF-HTTP, 「SCP」CA-CF, 「SCP」US-BuyVM1, 「SCP」US-BuyVM1-HTTP, 「SCP」US-BuyVM2, 「SCP」US-BuyVM2-HTTP, 「SCP」US-BuyVM3, 「SCP」US-BuyVM3-HTTP, 「SCP」US-BuyVM4, 「SCP」US-BuyVM4-HTTP, 「SCP」US-DP1, 「SCP」US-DP2, 「SCP」US-DP3, 「SCP」US-DP3-HTTP] 
+    proxies: [美国shodowsock] 
   - name: 🤖 ChatGPT
     type: select
-    proxies: [台湾-Trojan①, 台湾-Trojan②, '台湾①{移动|V2ray}', '台湾②{移动|V2ray}', '台湾01{移动|V2ray}', '台湾02{移动|V2ray}']
+    proxies: [台湾-Trojan①, 美国shodowsock, 台湾-Trojan②, '台湾①{移动|V2ray}', '台湾②{移动|V2ray}', '台湾01{移动|V2ray}', '台湾02{移动|V2ray}']
   - name: 📲 电报消息
     type: select
     proxies:
