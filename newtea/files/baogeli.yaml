@@ -17,10 +17,14 @@ proxies:
   - { name: 美国shodowsock, type: ss, server: ahcm.v-too.cloud, port: 10259, cipher: chacha20-ietf-poly1305, password: 42cdd4e3-c6e8-4e38-9292-b3c8af953166, udp: true }
   - { name: 台湾-Trojan①, type: trojan, server: tw01.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw01.trojanyyds.xyz }
   - { name: 台湾-Trojan②, type: trojan, server: tw02.trojanyyds.xyz, port: 443, password: 18eae858-29e5-4121-88c6-f7a11c14e52b, udp: true, sni: tw02.trojanyyds.xyz }
-  - { name: '台湾①{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: '台湾②{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: '台湾01{移动|V2ray}', type: vmess, server: cm1.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
-  - { name: '台湾02{移动|V2ray}', type: vmess, server: cm.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾①{移动|}', type: vmess, server: cm1.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾②{移动|}', type: vmess, server: cm.awslcn.cc, port: 25232, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾01{移动|}', type: vmess, server: cm1.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - { name: '台湾02{移动|}', type: vmess, server: cm.awslcn.cc, port: 25233, uuid: 18eae858-29e5-4121-88c6-f7a11c14e52b, alterId: 0, cipher: auto, udp: true, network: ws }
+  - {"name":"韩国vmess","type":"vmess","server":"v1hk007.recare.xyz","port":18107,"uuid":"448b8bbb-ac9f-35d3-8c10-a40856705b5f","alterId":2,"cipher":"auto","udp":true}
+  - {"name":"日本vmess","type":"vmess","server":"v2hk027.recare.xyz","port":18230,"uuid":"448b8bbb-ac9f-35d3-8c10-a40856705b5f","alterId":2,"cipher":"auto","udp":true}
+  - {"name":"香港vmess","type":"vmess","server":"v2hk031.recare.xyz","port":18202,"uuid":"448b8bbb-ac9f-35d3-8c10-a40856705b5f","alterId":2,"cipher":"auto","udp":true}
+  - {"name":"新加坡vmess","type":"vmess","server":"v2hk032.recare.xyz","port":18203,"uuid":"448b8bbb-ac9f-35d3-8c10-a40856705b5f","alterId":2,"cipher":"auto","udp":true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -30,7 +34,7 @@ proxy-groups:
       - DIRECT
   - name: 🚀 手动切换
     type: select
-    proxies: [美国shodowsock] 
+    proxies: [美国shodowsock,韩国vmess,日本vmess,香港vmess,新加坡vmess] 
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -39,7 +43,7 @@ proxy-groups:
     proxies: [美国shodowsock] 
   - name: 🤖 ChatGPT
     type: select
-    proxies: [台湾-Trojan①, 美国shodowsock, 台湾-Trojan②, '台湾①{移动|V2ray}', '台湾②{移动|V2ray}', '台湾01{移动|V2ray}', '台湾02{移动|V2ray}']
+    proxies: [台湾-Trojan①,新加坡vmess,美国shodowsock, 台湾-Trojan②, '台湾①{移动|}', '台湾②{移动|}', '台湾01{移动|}', '台湾02{移动|}']
   - name: 📲 电报消息
     type: select
     proxies:
@@ -2537,7 +2541,7 @@ rules:
   - DOMAIN-SUFFIX,yt.be,🌍 国外媒体
   - DOMAIN-SUFFIX,ytimg.com,🌍 国外媒体
   - DOMAIN,music.youtube.com,🌍 国外媒体
-  - DOMAIN-SUFFIX,v2rayse.com,🚀 节点选择
+  - DOMAIN-SUFFIX,se.com,🚀 节点选择
   - DOMAIN-SUFFIX,vpnse.org,🚀 节点选择
   - DOMAIN-SUFFIX,cff.pw,🚀 节点选择
   - DOMAIN-SUFFIX,cfmem.com,🚀 节点选择
@@ -7889,9 +7893,9 @@ rules:
   - DOMAIN-SUFFIX,uymaarip.com,🚀 节点选择
   - DOMAIN-SUFFIX,v2ex.com,🚀 节点选择
   - DOMAIN-SUFFIX,v2fly.org,🚀 节点选择
-  - DOMAIN-SUFFIX,v2ray.com,🚀 节点选择
-  - DOMAIN-SUFFIX,v2raycn.com,🚀 节点选择
-  - DOMAIN-SUFFIX,v2raytech.com,🚀 节点选择
+  - DOMAIN-SUFFIX,.com,🚀 节点选择
+  - DOMAIN-SUFFIX,cn.com,🚀 节点选择
+  - DOMAIN-SUFFIX,tech.com,🚀 节点选择
   - DOMAIN-SUFFIX,valeursactuelles.com,🚀 节点选择
   - DOMAIN-SUFFIX,van001.com,🚀 节点选择
   - DOMAIN-SUFFIX,van698.com,🚀 节点选择
